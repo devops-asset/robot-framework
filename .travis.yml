@@ -5,8 +5,8 @@ dist: trusty
 #user container-based infrastructure
 before_install:
 # install dependencies
-install: "pip install -r requirements.txt"  
-pip install robotframework
+  - install: "pip install -r requirements.txt"  
+  - pip install robotframework
 #python:
 #  - "2.7"
 script: pybot test_google.robot
