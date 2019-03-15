@@ -10,7 +10,7 @@ env:
 install:
   - pip install pipenv pew
   - pipenv --three
-  - pipenv install git+https://github.com/hmmlearn/hmmlearn.git
+  - pipenv install git@github.com/hmmlearn/hmmlearn.git
   - pipenv install
   - pip install robotframework
 
