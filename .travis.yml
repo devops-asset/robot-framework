@@ -6,5 +6,5 @@ before_install:
 # install dependencies
 install: "pip install -r requirements.txt"  
 python:
-  - "3.0"
+  - "2.7"
 script: pybot test_google.robot
