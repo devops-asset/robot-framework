@@ -1,12 +1,17 @@
 
 language: python
-sudo: required
-dist: trusty
-#user container-based infrastructure
-before_install:
-# install dependencies
-  - install: "pip install -r requirements.txt"  
+python:
+  - 3.6
+
+env:
+  - PIPENV_VENV_IN_PROJECT=1
+  - PIPENV_IGNORE_VIRTUALENVS=1
+
+install:
+  - pip install pipenv pew
+  - pipenv --three
+  - pipenv install git+https://github.com/hmmlearn/hmmlearn.git
+  - pipenv install
   - pip install robotframework
-#python:
-#  - "2.7"
+
 script: pybot test_google.robot
